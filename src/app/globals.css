@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,17 +18,165 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /*color: rgb(var(--foreground-rgb));*/
+  /*background: linear-gradient(*/
+  /*    to bottom,*/
+  /*    transparent,*/
+  /*    rgb(var(--background-end-rgb))*/
+  /*  )*/
+  /*  rgb(var(--background-start-rgb));*/
+}
+
+
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 0.5s ease-in-out forwards;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.main-title{
+  @apply text-[44px] mt-[100px] mb-[35px];
+}
+
+.sub-title{
+  margin-top:100px;
+}
+
+.navber_wrapper{
+  @apply m-auto w-full absolute;
+  background-color: #252627cc;
+
+}
+.navber_list {
+  @apply text-center text-base font-bold text-white
+}
+
+.navber_list a:hover{
+  background: linear-gradient(to top, #8B008B 50%, transparent 50%);
+}
+.banner_wrppaer {
+  @apply w-full h-[546px] flex items-end justify-center;
+  background-image: url("../../public/assets/image/bg_mainvisual.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.banner_wrppaer_sub {
+  @apply w-full h-[293px] flex items-end justify-center;
+  background-image: url("../../public/assets/image/bg_mainvisual.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 0.3s ease-in-out;
+}
+
+.visual_img{
+  @apply w-[872px];
+  transition: all 0.3s ease-in-out;
+}
+
+.visual_img_sub{
+  @apply w-[550px];
+  transition: all 0.5s ease-in-out;
+}
+
+
+
+.broad-castor-bg {
+  background:rgb(48,48,48);
+  border-radius: 10px;
+}
+.broad-castor-img{
+  @apply w-full;
+  border-radius: 10px;
+}
+
+.broad-castor-name {
+  height: 20px;
+  line-height: 20px;
+  color: rgb(38, 38, 38);
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+.broad-castor-button{
+  @apply flex justify-center items-center text-base font-bold text-white;
+  margin-top:10px;
+  background:#c5c5c5;
+  height: 46px;
+  border-radius: 10px;
+  cursor:auto;
+}
+
+.broad-castor-button-on-air{
+  @apply flex justify-center items-center text-base font-bold text-white;
+  margin-top:10px;
+  background:#c5c5c5;
+  height: 46px;
+  border-radius: 10px;
+  cursor:pointer;
+  animation: backgroundGradiant 4s infinite;
+}
+
+
+@keyframes backgroundGradiant {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: orangered;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+.footer-wrapper {
+  @apply w-full  mt-[200px] py-[20px];
+  background:#f8f8f8;
+}
+
+.footer {
+  @apply flex w-[1210px] px-[10px] m-auto;
+  gap:30px;
+}
+
+.footer-sub-menu{
+  @apply flex text-sm font-extrabold;
+  color:#666;
+  gap:18px;
+}
+
+.footer-address{
+  @apply mt-4 text-sm;
+  color:#5d5d5d;
+}
+.footer-address-sub{
+  @apply flex;
+  gap:14px;
+}
+
+.footer-copyright{
+  @apply mt-2.5 text-sm;
+  color:#5d5d5d;
 }

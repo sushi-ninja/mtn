@@ -1,0 +1,62 @@
+
+.intro{
+    @apply underline font-bold text-lg mt-[10px];
+    color:#9e1b61;
+}
+
+.introTime{
+    @apply mt-[10px];
+    display: inline-block;
+    padding: 5px 40px;
+    border-radius: 30px;
+    background: #9e1b61;
+    color: #ffffff;
+    font-size: 1.25rem;
+}
+
+
+.broadCastorWrapper{
+    width:116px;
+    text-align: center;
+}
+
+.broad-castor-wrapper-sub{
+    display: flex;
+    width:116px;
+    text-align: center;
+}
+
+.broadCastor{
+    position: relative;
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    background: #302f33;
+    overflow: hidden;
+}
+.programInfoCastorName{
+    width: 116px;
+    margin-top:10px;
+}
+
+.broadCastTable{
+    @apply table-auto;
+}
+
+.broadCastTable th{
+    background: #f7f7f7;
+    font-size: 18px;
+    width:200px;
+}
+.broadCastTable td{
+    width:729px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.broadCastTable tbody th,
+.broadCastTable tbody td {
+    @apply p-[20px];
+    border: 1px solid #e2e2e2;
+}
